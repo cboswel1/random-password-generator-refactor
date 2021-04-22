@@ -1,25 +1,17 @@
+const generateBtn = document.querySelector("#generate");
 
-
-
-
-// Variables with potential user criteria
-const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
-const lowerCase = "abcdefghijklmnopqrstuvwxyz"
-const numbers = "1234567890"
-const special = "!@#$%^&*()"
-
-
-
-var generateBtn = document.querySelector("#generate");
-
-// empty array for loop of user criteria. 
-var pass= [];
+let pass= [];
 
 // Function to generate password
-function generatePassword() {
+generatePassword = () => {
+
+	const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
+	const lowerCase = "abcdefghijklmnopqrstuvwxyz"
+	const numbers = "1234567890"
+	const special = "!@#$%^&*()"
 
   // stores users choice from possible selection criteria.  
-  var response = ""; 
+  let response = ""; 
 
     //User Prompts Section
 
@@ -132,14 +124,13 @@ function generatePassword() {
 }
 
     // Write password to the #password input
-    function writePassword() {
-      var password = generatePassword();
-      var passwordText = document.querySelector("#password");
+writePassword = () => {
+	const password = generatePassword();
+  const passwordText = document.querySelector("#password");
 
       // .join('') to remove commas from final output 
-      passwordText.value = pass.join('');
-
-    }
+  passwordText.value = pass.join('');
+  }
 
     // Add event listener to generate button
-    generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword);
