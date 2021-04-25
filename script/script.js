@@ -127,10 +127,7 @@ generatePassword = () => {
 writePassword = () => {
 	const password = generatePassword();
   const passwordText = document.querySelector("#password");
-
-      // .join('') to remove commas from final output 
   passwordText.value = pass.join('');
   }
 
-    // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);

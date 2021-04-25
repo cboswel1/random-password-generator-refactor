@@ -20,14 +20,28 @@
           <h2>Generate a Password</h2>
           <p>Welcome to the world's most okayest Random Password Generator. Please click "Generate Password" and follow the prompts to be gifted quite possibly the most okayest password you've ever had.</p>
         </div>
-        <div class="card-body">
+
+        <form>
+          <p>Choose a Password length:<input type="text" name="num" value="8" size="8" maxlength="128">(minimum 6, maximum 128). </p>
+          <p>Choose your parameters:</p>
+          <fieldset>
+            <input type="checkbox" id="uppercase" name="params1" value="Uppercase">
+            <label for="params1">Uppercase</label>
+            <input type="checkbox" id="lowercase" name="params2" value="Lowercase">
+            <label for="params1">Lowercase</label>
+            <input type="checkbox" id="nums" name="params3" value="Numbers">
+            <label for="params1">Numbers</label>
+            <input type="checkbox" id="special" name="params4" value="Special">
+            <label for="params1">Special</label>
+          </fieldset>
           <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
+          readonly
+          id="password"
+          placeholder="Your Secure Password"
+          aria-label="Generated Password"
+        ></textarea>
+        </form>
+
         <div class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
         </div>
