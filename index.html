@@ -22,16 +22,16 @@
         </div>
 
         <form>
-          <p>Choose a Password length:<input type="text" name="num" value="8" size="8" maxlength="128">(minimum 6, maximum 128). </p>
+          <p>Choose a Password length:<input type="text" class="passlength" name="num" size="6" maxlength="128" required>(minimum 6, maximum 128). </p>
           <p>Choose your parameters:</p>
           <fieldset>
-            <input type="checkbox" id="uppercase" name="params1" value="Uppercase">
+            <input type="checkbox" class="uppercase" name="params1" value="Uppercase">
             <label for="params1">Uppercase</label>
-            <input type="checkbox" id="lowercase" name="params2" value="Lowercase">
+            <input type="checkbox" class="lowercase" name="params2" value="Lowercase">
             <label for="params1">Lowercase</label>
-            <input type="checkbox" id="nums" name="params3" value="Numbers">
+            <input type="checkbox" class="nums" name="params3" value="Numbers">
             <label for="params1">Numbers</label>
-            <input type="checkbox" id="special" name="params4" value="Special">
+            <input type="checkbox" class="special" name="params4" value="Special">
             <label for="params1">Special</label>
           </fieldset>
           <textarea
