@@ -16,46 +16,46 @@ generatePassword = () => {
 
   let response = ""; 
 
-  if (upper.checked == true && lower.checked == true && num.checked == true && spec == true) {
+  if (upper.checked  && lower.checked  && num.checked  && spec) {
     response = upperCase.concat(lowerCase, numbers, special);
   } 
-  else if (upper.checked == true && lower.checked == true && num.checked == true) {
+  else if (upper.checked && lower.checked && num.checked) {
       response = upperCase.concat(lowerCase, numbers);
   } 
-  else if (upper.checked == true && lower.checked == true && spec.checked == true) {
+  else if (upper.checked && lower.checked && spec.checked) {
       response = upperCase.concat(lowerCase, special);
   } 
-  else if (upper.checked == true && spec.checked == true && num.checked == true) {
+  else if (upper.checked && spec.checked && num.checked) {
       response = upperCase.concat(special, numbers);
   } 
-  else if (spec.checked == true && lower.checked == true && num.checked == true) {
+  else if (spec.checked && lower.checked && num.checked) {
      response = lowerCase.concat(special, numbers);
   }
-  else if (upper.checked == true && spec.checked == true ) {
+  else if (upper.checked && spec.checked ) {
      response = upperCase.concat(special);
   }
-  else if (upper.checked == true && lower.checked == true) {
+  else if (upper.checked && lower.checked) {
      response = upperCase.concat(lowerCon);
   }
-  else if (upper.checked == true && num.checked == true) {
+  else if (upper.checked && num.checked) {
      response = upperCase.concat(numbers);
   }
-  else if (lower.checked == true && spec.checked == true) {
+  else if (lower.checked && spec.checked) {
      response = lowerCase.concat(special);
   }
-  else if (lower.checked == true && num.checked == true) {
+  else if (lower.checked && num.checked) {
      response = lowerCase.concat(numbers); 
   }
-  else if (num.checked == true && spec.checked == true) {
+  else if (num.checked && spec.checked) {
      response = numbers.concat(special);
   } 
-  else if (upper.checked === true) {
+  else if (upper.checked) {
      response = upperCase;
   }
-  else if (lower.checked === true) {
+  else if (lower.checked) {
      response = lowerCase;
   } 
-  else if (num.checked === true) {
+  else if (num.checked) {
      response = numbers;
   };
   
@@ -65,11 +65,19 @@ generatePassword = () => {
   };
 }
 
-writePassword = () => {
+writePassword = (e) => {
+  
   const password = generatePassword();
   const passwordText = document.querySelector("#password");
   passwordText.value = pass.join('');
-
+  e.preventDefault();
+  document.querySelector('#generate').disabled = true;
   }
 
 generateBtn.addEventListener("click", writePassword);
+
+
+function resetForm () {
+  document.querySelectorAll('input').reset();
+}
+
