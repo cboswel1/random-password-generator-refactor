@@ -16,46 +16,46 @@ generatePassword = () => {
 
   let response = ""; 
 
-  if (upper.checked  && lower.checked  && num.checked  && spec) {
+  if (upper && lower && num && spec) {
     response = upperCase.concat(lowerCase, numbers, special);
   } 
-  else if (upper.checked && lower.checked && num.checked) {
+  else if (upper && lower && num) {
       response = upperCase.concat(lowerCase, numbers);
   } 
-  else if (upper.checked && lower.checked && spec.checked) {
+  else if (upper && lower && spec) {
       response = upperCase.concat(lowerCase, special);
   } 
-  else if (upper.checked && spec.checked && num.checked) {
+  else if (upper && spec && num) {
       response = upperCase.concat(special, numbers);
   } 
-  else if (spec.checked && lower.checked && num.checked) {
+  else if (spec && lower && num) {
      response = lowerCase.concat(special, numbers);
   }
-  else if (upper.checked && spec.checked ) {
+  else if (upper && spec) {
      response = upperCase.concat(special);
   }
-  else if (upper.checked && lower.checked) {
+  else if (upper && lower) {
      response = upperCase.concat(lowerCon);
   }
-  else if (upper.checked && num.checked) {
+  else if (upper && num) {
      response = upperCase.concat(numbers);
   }
-  else if (lower.checked && spec.checked) {
+  else if (lower && spec) {
      response = lowerCase.concat(special);
   }
-  else if (lower.checked && num.checked) {
+  else if (lower && num) {
      response = lowerCase.concat(numbers); 
   }
-  else if (num.checked && spec.checked) {
+  else if (num && spec) {
      response = numbers.concat(special);
   } 
-  else if (upper.checked) {
+  else if (upper) {
      response = upperCase;
   }
-  else if (lower.checked) {
+  else if (lower) {
      response = lowerCase;
   } 
-  else if (num.checked) {
+  else if (num) {
      response = numbers;
   };
   
@@ -66,7 +66,6 @@ generatePassword = () => {
 }
 
 writePassword = (e) => {
-  
   const password = generatePassword();
   const passwordText = document.querySelector("#password");
   passwordText.value = pass.join('');
@@ -75,7 +74,6 @@ writePassword = (e) => {
   }
 
 generateBtn.addEventListener("click", writePassword);
-
 
 function resetForm () {
   document.querySelectorAll('input').reset();
