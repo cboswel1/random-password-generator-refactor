@@ -22,7 +22,7 @@
         </div>
 
         <form class="form">
-          <p>Choose a Password length:<input type="text" class="passlength" name="num" size="6" maxlength="128" required>(minimum 6, maximum 128). </p>
+          <p>Choose a Password length:<input type="number" class="passlength" name="choice" min=6 max=128 required />(minimum 6, maximum 128). </p>
           <p>Choose your parameters:</p>
           <fieldset>
             <input type="checkbox" class="uppercase" name="params1" value="Uppercase">
@@ -39,14 +39,14 @@
           id="password"
           placeholder="Your Secure Password"
           aria-label="Generated Password"
-        ></textarea>
-        
+          ></textarea>
+          <div class="card-footer"></div>
+            <input type="submit" value="Submit" id="generate" name="submitForm" />
+            <input type = "button" value = "Reset data" onclick = "resetForm()"/>
+          </div>
+        </form>
 
-        <div class="card-footer">
-          <button type="submit" id="generate">Generate Password</button>
-          <button type="submit" onclick="resetForm()">Reset</button>
-        </div>
-      </form>
+      
       </div>
     </div>
     

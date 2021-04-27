@@ -16,66 +16,70 @@ generatePassword = () => {
 
   let response = ""; 
 
-  if (upper && lower && num && spec) {
+
+  if (upper.checked && lower.checked && num.checked && spec.checked) {
     response = upperCase.concat(lowerCase, numbers, special);
   } 
-  else if (upper && lower && num) {
+  else if (upper.checked && lower.checked && num.checked) {
       response = upperCase.concat(lowerCase, numbers);
   } 
-  else if (upper && lower && spec) {
+  else if (upper.checked && lower.checked && spec.checked) {
       response = upperCase.concat(lowerCase, special);
   } 
-  else if (upper && spec && num) {
+  else if (upper.checked && spec.checked && num.checked) {
       response = upperCase.concat(special, numbers);
   } 
-  else if (spec && lower && num) {
+  else if (spec.checked && lower.checked && num.checked) {
      response = lowerCase.concat(special, numbers);
   }
-  else if (upper && spec) {
+  else if (upper.checked && spec.checked) {
      response = upperCase.concat(special);
   }
-  else if (upper && lower) {
-     response = upperCase.concat(lowerCon);
+  else if (upper.checked && lower.checked) {
+     response = upperCase.concat(lowerCase);
   }
-  else if (upper && num) {
+  else if (upper.checked && num.checked) {
      response = upperCase.concat(numbers);
   }
-  else if (lower && spec) {
+  else if (lower.checked && spec.checked) {
      response = lowerCase.concat(special);
   }
-  else if (lower && num) {
+  else if (lower.checked && num.checked) {
      response = lowerCase.concat(numbers); 
   }
-  else if (num && spec) {
+  else if (num.checked && spec.checked) {
      response = numbers.concat(special);
   } 
-  else if (upper) {
+  else if (upper.checked) {
      response = upperCase;
   }
-  else if (lower) {
+  else if (lower.checked) {
      response = lowerCase;
   } 
-  else if (num) {
+  else if (num.checked) {
      response = numbers;
   };
   
-  for (var i = 0; i < passLength; i++) {
-    var userChoice = response[Math.floor(Math.random() * response.length)];
+  for (let i = 0; i < passLength; i++) {
+    let userChoice = response[Math.floor(Math.random() * response.length)];
     pass.push(userChoice);
   };
 }
+
 
 writePassword = (e) => {
   const password = generatePassword();
   const passwordText = document.querySelector("#password");
   passwordText.value = pass.join('');
-  e.preventDefault();
+  
   document.querySelector('#generate').disabled = true;
   }
+
 
 generateBtn.addEventListener("click", writePassword);
 
 function resetForm () {
-  document.querySelectorAll('input').reset();
+  document.querySelector('.form').reset();
+  document.querySelector('#generate').disabled = false;
 }
 
