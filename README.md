@@ -27,6 +27,6 @@ Christian Boswell
 
 ## Questions
 
-[Github profiles](https://github.com/cboswel1)(https://github.com/vivid-green)
+[Github profiles](https://github.com/cboswel1)
 
-[E-Mail](mailto:christianboswell86@gmail.com)(zacharycreek@gmail.com)
+[E-Mail](mailto:christianboswell86@gmail.com)
