@@ -1,8 +1,4 @@
-# random-password-generator-refactor
-Complete refactor of previous Random Password Generator project, now featuring SASS for fun. 
-
-# Conveyance
-
+# random-password-generator-refactor 
 ![](https://img.shields.io/badge/license-MIT-yellow)
 
 Refactor of previous Random Password Generator project, cleaning up JS for ES6 standardization. Added scss for futher practice. 
