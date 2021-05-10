@@ -8,17 +8,16 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
     <script defer src="./script/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js
-
-
-
-    "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   </head>
 
-  <body>
+  <body id="demo" style="transition: opacity 1s">
     <div class="wrapper">
       <div class="card">
         <header class="header__card">
+
+          <!-- TODO: Import SVG to clean up html -->
+
           <svg width="264" height="35" viewBox="0 0 264 35" fill="none" xmlns="http://www.w3.org/2000/svg" id="title">
             <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="0.268005" y="0.588013" width="263" height="34" fill="black">
             <rect fill="white" x="0.268005" y="0.588013" width="263" height="34"/>
@@ -60,13 +59,16 @@
             </svg>
             
         </header>
+
         <div class="header__sub">
           <p>Welcome to the world's most okayest Random Password Generator. Please click "Generate Password" and follow the prompts to be gifted quite possibly the most okayest password you've ever had.</p>
         </div>
+
         <div>
         <form>
           <p>Choose a Password length:<input type="number" class="passlength" name="choice" required min=6 max=128  />(minimum 6, maximum 128). </p>
           <p>Choose your parameters:</p>
+
           <fieldset class="field-set">
             <input type="checkbox" class="uppercase" name="params1" value="Uppercase">
             <label for="params1">Uppercase</label>
@@ -77,17 +79,19 @@
             <input type="checkbox" class="special" name="params4" value="Special">
             <label for="params1">Special</label>
           </fieldset>
+
           <textarea
           readonly
           id="password"
           placeholder="Your Secure Password"
           ></textarea>
+
           <div class="btn-footer">
             <input type="submit" class="btn" name="submit" value="Generate Password" id="generate">
           </div>
+
         </form>
         </div>
-      
       </div>
     </div>
     

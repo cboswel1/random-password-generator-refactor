@@ -1,13 +1,15 @@
 # random-password-generator-refactor 
 ![](https://img.shields.io/badge/license-MIT-yellow)
 
-Refactor of previous Random Password Generator project, cleaning up JS for ES6 standardization. Added SASS and Anime.js for futher practice. 
+Refactor of previous Random Password Generator project, cleaning up JS for ES6 standardization. Added SASS and Anime.js for further practice. 
+
 
 ## Live Deploy 
-[GitHub Pages]
+[GitHub Pages](https://cboswel1.github.io/random-password-generator-refactor/)
+
 
 ## Table of Contents 
-  - [Usage](#usage)
+  - [Preview](#preview)
   - [License](#license)
   - [Contributing](#contributing)
   - [Questions](#questions)
@@ -27,6 +29,6 @@ Christian Boswell
 
 ## Questions
 
-[Github profiles](https://github.com/cboswel1)
+[Github profile](https://github.com/cboswel1)
 
 [E-Mail](mailto:christianboswell86@gmail.com)
