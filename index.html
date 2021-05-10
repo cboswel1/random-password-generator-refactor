@@ -12,19 +12,21 @@
 
   <body>
     <div class="wrapper">
-      <header class="header">
+      <header class="header__primary">
         <h1>Password Generator</h1>
       </header>
       <div class="card">
-        <div class="card-header">
+        <header class="header__card">
           <h2>Generate a Password</h2>
+        </header>
+        <div class="header__sub">
           <p>Welcome to the world's most okayest Random Password Generator. Please click "Generate Password" and follow the prompts to be gifted quite possibly the most okayest password you've ever had.</p>
         </div>
-
-        <form class="form">
-          <p>Choose a Password length:<input type="number" class="passlength" name="choice" min=6 max=128 required />(minimum 6, maximum 128). </p>
+        <div>
+        <form>
+          <p>Choose a Password length:<input type="number" class="passlength" name="choice" required min=6 max=128  />(minimum 6, maximum 128). </p>
           <p>Choose your parameters:</p>
-          <fieldset>
+          <fieldset class="field-set">
             <input type="checkbox" class="uppercase" name="params1" value="Uppercase">
             <label for="params1">Uppercase</label>
             <input type="checkbox" class="lowercase" name="params2" value="Lowercase">
@@ -38,14 +40,12 @@
           readonly
           id="password"
           placeholder="Your Secure Password"
-          aria-label="Generated Password"
           ></textarea>
-          <div class="card-footer"></div>
-            <input type="submit" value="Submit" id="generate" name="submitForm" />
-            <input type = "button" value = "Reset data" onclick = "resetForm()"/>
+          <div class="btn-footer">
+            <input type="submit" class="btn" name="submit" value="Generate Password" id="generate">
           </div>
         </form>
-
+        </div>
       
       </div>
     </div>

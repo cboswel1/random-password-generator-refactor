@@ -5,6 +5,11 @@
 @import 'base/base'; 
 @import 'base/typography'; 
 
+@import 'components/button';
+@import 'components/card';
+@import 'components/text-field';
+@import 'components/field-set';
+
 @import 'layout/header';
 
 @import 'pages/home';

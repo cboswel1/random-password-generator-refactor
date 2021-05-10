@@ -1,0 +1,15 @@
+#password {
+    appearance: none;
+    border: none;
+    display: block;
+    width: 100%;
+    min-height: 100px;
+    padding-top: 15px 15px 85px 15px;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 10px 0px 10px 0px;
+    border: 2px dashed $color-grey-light;
+    border-radius: 6px;
+    resize: none;
+    overflow: hidden;
+}

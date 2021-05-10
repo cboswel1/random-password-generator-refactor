@@ -1,6 +1,14 @@
 .header {
+    &__primary {
     text-align: center;
     padding: 20px;
     color: $color-yellow-light;
     text-transform: uppercase;
+    }
+
+    &__card, &__sub{
+      display: block;
+      text-align: center;
+      padding: 15px;
+  }
   }

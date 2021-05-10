@@ -20,11 +20,67 @@ body {
   box-sizing: border-box;
   background-color: #484d5c; }
 
-.header {
+p {
+  display: block;
+  text-align: center;
+  padding: 5px 0 5px 0; }
+
+.btn {
+  border: none;
+  background-color: #b71c1c;
+  border-radius: 25px;
+  color: #fff;
+  display: inline-block;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  text-align: center;
+  cursor: pointer; }
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  border-width: 1px;
+  color: #484d5c;
+  font-size: 18px;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 30px 40px; }
+
+#password {
+  appearance: none;
+  border: none;
+  display: block;
+  width: 100%;
+  min-height: 100px;
+  padding-top: 15px 15px 85px 15px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px 0px 10px 0px;
+  border: 2px dashed #c0c7cf;
+  border-radius: 6px;
+  resize: none;
+  overflow: hidden; }
+
+.field-set {
+  text-align: center;
+  padding: 15px 0 15px 0; }
+
+.header__primary {
   text-align: center;
   padding: 20px;
   color: #ffce00;
   text-transform: uppercase; }
 
+.header__card, .header__sub {
+  display: block;
+  text-align: center;
+  padding: 15px; }
+
 .wrapper {
   padding: 30px, 20px, 0px, 20px; }
+
+.btn-footer {
+  display: block;
+  text-align: center; }

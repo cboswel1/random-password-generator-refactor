@@ -1,4 +1,5 @@
-const generateBtn = document.querySelector("#generate");
+const generateBtn = document.getElementById("generate");
+
 
 let pass= [];
 
@@ -14,51 +15,59 @@ generatePassword = () => {
 	const numbers = "1234567890"
 	const special = "!@#$%^&*()"
 
+  const isUpper = upper.checked; 
+  const isLower = lower.checked; 
+  const isNumber = num.checked; 
+  const isSpecial = spec.checked
+
   let response = ""; 
 
 
-  if (upper.checked && lower.checked && num.checked && spec.checked) {
+  if (isUpper && isLower && isNumber && isSpecial) {
     response = upperCase.concat(lowerCase, numbers, special);
   } 
-  else if (upper.checked && lower.checked && num.checked) {
+  else if (isUpper && isLower && isNumber) {
       response = upperCase.concat(lowerCase, numbers);
   } 
-  else if (upper.checked && lower.checked && spec.checked) {
+  else if (isUpper && isLower && isSpecial) {
       response = upperCase.concat(lowerCase, special);
   } 
-  else if (upper.checked && spec.checked && num.checked) {
+  else if (isUpper && isSpecial && isNumber) {
       response = upperCase.concat(special, numbers);
   } 
-  else if (spec.checked && lower.checked && num.checked) {
+  else if (isSpecial && isLower && isNumber) {
      response = lowerCase.concat(special, numbers);
   }
-  else if (upper.checked && spec.checked) {
+  else if (isUpper && isSpecial) {
      response = upperCase.concat(special);
   }
-  else if (upper.checked && lower.checked) {
+  else if (isUpper && isLower) {
      response = upperCase.concat(lowerCase);
   }
-  else if (upper.checked && num.checked) {
+  else if (isUpper && isNumber) {
      response = upperCase.concat(numbers);
   }
-  else if (lower.checked && spec.checked) {
+  else if (isLower && isSpecial) {
      response = lowerCase.concat(special);
   }
-  else if (lower.checked && num.checked) {
+  else if (isLower && isNumber) {
      response = lowerCase.concat(numbers); 
   }
-  else if (num.checked && spec.checked) {
+  else if (isNumber && isSpecial) {
      response = numbers.concat(special);
   } 
-  else if (upper.checked) {
+  else if (isUpper) {
      response = upperCase;
   }
-  else if (lower.checked) {
+  else if (isLower) {
      response = lowerCase;
   } 
-  else if (num.checked) {
+  else if (isNumber) {
      response = numbers;
-  };
+  }
+  else if (isSpecial) {
+   response = special;
+  } ;
   
   for (let i = 0; i < passLength; i++) {
     let userChoice = response[Math.floor(Math.random() * response.length)];
@@ -66,20 +75,17 @@ generatePassword = () => {
   };
 }
 
+function writePassword(e) {
+  e.preventDefault();
 
-writePassword = (e) => {
   const password = generatePassword();
-  const passwordText = document.querySelector("#password");
+  const passwordText = document.getElementById("password");
   passwordText.value = pass.join('');
-  
-  document.querySelector('#generate').disabled = true;
-  }
 
+  
+}
 
 generateBtn.addEventListener("click", writePassword);
 
-function resetForm () {
-  document.querySelector('.form').reset();
-  document.querySelector('#generate').disabled = false;
-}
+
 
