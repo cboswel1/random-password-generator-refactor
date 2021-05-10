@@ -1,3 +1,15 @@
+document.body.className = 'fade';
+
+anime({
+  targets: '#title path',
+  strokeDashoffset: [anime.setDashoffset, 0],
+  easing: 'easeInOutSine',
+  duration: 1500,
+  delay: function(el, i) { return i * 40 },
+  direction: 'alternate',
+  loop: false
+});
+
 const generateBtn = document.getElementById("generate");
 
 let pass= [];

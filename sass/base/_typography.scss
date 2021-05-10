@@ -5,7 +5,14 @@ body {
     padding: 3rem;
     box-sizing: border-box;
     background-color: $color-primary;
+    opacity: 0;
+    transition-duration: 2.0s;
+    transition-property: opacity;
 }
+
+body.fade {
+    opacity: 1;
+  }
 
 p {
     display: block;
