@@ -16,7 +16,7 @@ Refactor of previous Random Password Generator project, cleaning up JS for ES6 s
   
 
 ## Preview 
-![]()
+![](https://github.com/cboswel1/random-password-generator-refactor/blob/main/img/demo.gif?raw=true)
 
 
 ## License
