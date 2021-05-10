@@ -91,6 +91,7 @@ function writePassword(e) {
   const password = generatePassword();
   const passwordText = document.getElementById("password");
   passwordText.value = pass.join('');
+	generateBtn.disabled = true;
 }
 
 generateBtn.addEventListener("click", writePassword);
