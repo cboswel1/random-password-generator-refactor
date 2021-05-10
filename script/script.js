@@ -1,6 +1,5 @@
 const generateBtn = document.getElementById("generate");
 
-
 let pass= [];
 
 generatePassword = () => {
@@ -21,7 +20,6 @@ generatePassword = () => {
   const isSpecial = spec.checked
 
   let response = ""; 
-
 
   if (isUpper && isLower && isNumber && isSpecial) {
     response = upperCase.concat(lowerCase, numbers, special);
@@ -81,8 +79,6 @@ function writePassword(e) {
   const password = generatePassword();
   const passwordText = document.getElementById("password");
   passwordText.value = pass.join('');
-
-  
 }
 
 generateBtn.addEventListener("click", writePassword);
