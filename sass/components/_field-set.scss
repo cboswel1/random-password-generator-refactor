@@ -1,4 +1,9 @@
 .field-set {
     text-align: center;
     padding: 15px 0 15px 0;
+
+    @include respond(tab-port) {
+        font-size: 1rem;
+        
+    }
 }

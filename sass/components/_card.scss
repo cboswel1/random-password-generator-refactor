@@ -7,4 +7,14 @@
     margin: 0 auto;
     max-width: 800px;
     padding: 30px 40px;
+
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 0px;
+    }
+
+    @include respond(phone) {
+        width: 100%;
+        padding: 0px;
+    }
   }

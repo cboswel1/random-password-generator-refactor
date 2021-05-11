@@ -5,6 +5,18 @@
   padding: 0;
   box-sizing: inherit; }
 
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
 html,
 body {
   box-sizing: border-box; }
@@ -30,19 +42,24 @@ p {
   display: block;
   text-align: center;
   padding: 5px 0 5px 0; }
+  @media only screen and (max-width: 56.25em) {
+    p {
+      font-size: 1rem; } }
 
 .btn {
   border: none;
   background-color: #b71c1c;
   border-radius: 25px;
   color: #fff;
-  display: inline-block;
   font-size: 22px;
   line-height: 22px;
   margin: 16px 16px 16px 20px;
   padding: 14px 34px;
   text-align: center;
   cursor: pointer; }
+  @media only screen and (max-width: 56.25em) {
+    .btn {
+      font-size: 1rem; } }
 
 .card {
   background-color: #fff;
@@ -53,6 +70,14 @@ p {
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px; }
+  @media only screen and (max-width: 56.25em) {
+    .card {
+      width: 100%;
+      padding: 0px; } }
+  @media only screen and (max-width: 37.5em) {
+    .card {
+      width: 100%;
+      padding: 0px; } }
 
 #password {
   appearance: none;
@@ -72,6 +97,9 @@ p {
 .field-set {
   text-align: center;
   padding: 15px 0 15px 0; }
+  @media only screen and (max-width: 56.25em) {
+    .field-set {
+      font-size: 1rem; } }
 
 .header__primary {
   text-align: center;
